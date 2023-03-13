@@ -113,7 +113,12 @@ header{
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    transition: 0.5 ease;
+    transform: scale(0);   /*para deixar escondido enquanto nao chama a função login*/
+    transition: 0.5s;
+}
+
+.capa.active-popup{
+    transform: scale(1);
 }
 
 
@@ -128,7 +133,8 @@ header{
 
 .capa .form-box.login{  /*login*/
     /*display: none;*/
-    transition: 0.5s ease;
+    transition:  .18s ease;
+    transform: translateX(0);
 }
 
 
@@ -142,6 +148,7 @@ header{
 
 .capa .form-box.register{   /*registro*/
     position: absolute;
+    transition: none;
     transform: translateX(400px);
     
 
@@ -149,9 +156,8 @@ header{
 
 
 .capa.active .form-box.register{  /*registro*/
-    transition: none;
+    transition:  .18s ease;
     transform: translateX(0px);
-    transition: 0.5s;
 
 }
 

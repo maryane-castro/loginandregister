@@ -112,12 +112,12 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    /*overflow: hidden;*/
-    transition:  0.2 ease;
+    overflow: hidden;
+    transition: 0.5 ease;
 }
 
 
-.capa .active{
+.capa.active{
     height: 520px;
 }
 
@@ -126,12 +126,13 @@ header{
     padding: 40px;
 }
 
-.capa .form-box.login{
+.capa .form-box.login{  /*login*/
     /*display: none;*/
+    transition: 0.5s ease;
 }
 
 
-.capa .active .form-box.login{
+.capa.active .form-box.login{   /*login*/
     transition: none;
     transform: translateX(-400px);
 
@@ -139,9 +140,19 @@ header{
 }
 
 
-.capa .form-box.register{
+.capa .form-box.register{   /*registro*/
     position: absolute;
     transform: translateX(400px);
+    
+
+}
+
+
+.capa.active .form-box.register{  /*registro*/
+    transition: none;
+    transform: translateX(0px);
+    transition: 0.5s;
+
 }
 
 

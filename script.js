@@ -1,15 +1,39 @@
-const capa = document.querySelector('.capa');
-const loginLink = document.querySelector('.login-link');
-const registerLink = document.querySelector('.register-link');
+const capa = document.querySelector('.capa')
+const loginPag = document.querySelector('.register-link')
+const registerPag = document.querySelector('.login-link')
+const x = document.querySelector('.icon-close')
+
+
+
+x.addEventListener("click", () => {
+    
+})
+
+
+loginPag.addEventListener("click", () => {
+    capa.classList.add('active')
+
+})
+registerPag.addEventListener("click", () => {
+    capa.classList.remove('active')
+})
 
 
 
 
 
+/*
+loginPag.addEventListener("click", () => {
 
-registerLink.addEventListener('click', register) 
+})
+
+
+
 
 
 function register(){
-    capa.classList.remove('active');
+    console.log('ativado')
 }
+
+registro.addEventListener("click", register)
+*/
